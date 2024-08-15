@@ -1,0 +1,359 @@
+<html>
+    <head>
+        <title>デザインシステム - About｜おばさんず</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="../assets/favicon.ico">
+        <link rel="icon" href="../asstes/favicon.svg" type="image/svg+xml">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../assets/css/common.css">
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/d9c51249f5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <span class="header_logo">
+                <img src="../assets/logo.jpg">
+                <a href="../index.html">OBASANZ<span>a Minecraft player</a>
+            </span>
+            <ul class="nav_wrapper">
+                <li><a href="index.html">GALLERY</a></li>
+                <li class="marked"><a href="index.html">ABOUT</a></li>
+                <li><a href="../notes/index.html">NOTES</a></li>
+                <li><a href="index.html">CONTACT</a></li>
+            </ul>
+        </header>
+        <main>
+            <section class="top_wrapper">
+                <div class="top_title">
+                    <h1>DESIGN SYSTEM<span>デザインシステム / Last Update: 2024.7.26</span></h1>
+                </div>
+            </section>
+            <section class="content_wrapper">
+                <div class="design_main">
+                    <div class="index">
+                        <div class="index_wrapper">
+                            <p>INDEX</p>
+                            <ul>
+                                <li><a class="index_title" href="#purpose">デザインシステムの目的</a></li>
+                                <li><a href="#color">カラー</a></li>
+                                <li><a href="#typography">タイポグラフィ</a></li>
+                                <li><a href="#component">コンポーネント</a></li>
+                                <li><a href="#color">その他のデザイン</a></li>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <section class="main_container">
+                            <div class="explain_container">
+                                <h2 id="purpose">デザインシステム策定の目的</h2>
+                                <p>洗練されてデザイン性に優れ、ユーザーフレンドリーなサイトを作ってみたい、あと単純にやってみたいという理由だけで簡単なデザインシステムを策定しました。マイクラ建築集のサイトがデザインシステムまで用意しているのは迷走でしかないですが、<a href="https://design.digital.go.jp" target="_blank">デジタル庁デザインシステム</a>を全面的に参考にし、デザイン・アクセシビリティ共に優れたものを構築することを最終目標としています。</p>
+                            </div>
+                        </section>
+                        <section class="main_container">
+                                <h2 id="color">カラー</h2>
+                                <p>白（#ffffff）とのコントラスト比が1:4.5以上であることが読みやすい字らしいので、アクセントカラーも含めてほぼ全ての色が1:4.5以上になるようにがんばっています。</p>
+                                <h3>ベースカラー</h3>
+                                <p>背景での使用を想定しています。</p>
+                                <div class="color_wrapper">
+                                    <div class="color_inner based">
+                                    </div>
+                                    <div class="color_txtbox">
+                                        <h6>White</h6>
+                                        <ul>
+                                            <li>#fffff</li>
+                                            <li>RGB(255, 255, 255)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="color_wrapper grade">
+                                    <div> 
+                                        <div class="color_inner white1"></div>
+                                        
+                                        <ul>
+                                            <h6>100</h6>
+                                            <li>#ffffff</li>
+                                            <li>RGB(255, 255, 255)</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner white2"></div>
+                                        <ul>
+                                            <h6>200</h6>
+                                            <li>#e6e6e6</li>
+                                            <li>RGB(97, 97, 97)</li>
+                                            <li>1 : 1.25
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner white3"></div>
+                                        <ul>
+                                            <h6>300</h6>
+                                            <li>#cccccc</li>
+                                            <li>RGB(204, 204, 204)</li>
+                                            <li>1 : 1.61</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner white4"></div>
+                                        <ul>
+                                            <h6>400</h6>
+                                            <li>#b3b3b3</li>
+                                            <li>RGB(179, 179, 179)</li>
+                                            <li>1 : 2.1</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner white5"></div>
+                                        <ul>
+                                            <h6>500</h6>
+                                            <li>#999999</li>
+                                            <li>RGB(153, 153, 153)</li>
+                                            <li>1 : 2.85</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3>メインカラー</h3>
+                                <p>文字色での使用を想定しています。</p>
+                                <div class="color_wrapper">
+                                    <div class="color_inner main">
+                                    </div>
+                                    <div class="color_txtbox">
+                                        <h6>Black</h6>
+                                        <ul>
+                                            <li>#3a3a3a</li>
+                                            <li>RGB(58, 58, 58)</li>
+                                            <li>1 : 11.37</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="color_wrapper grade">
+                                    <div> 
+                                        <div class="color_inner gray1"></div>
+                                        
+                                        <ul>
+                                            <h6>100</h6>
+                                            <li>#898989</li>
+                                            <li>RGB(137, 137, 137)</li>
+                                            <li>1 : 3.5</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner gray2"></div>
+                                        <ul>
+                                            <h6>200</h6>
+                                            <li>#616161</li>
+                                            <li>RGB(97, 97, 97)</li>
+                                            <li>1 : 6.19</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner gray3"></div>
+                                        <ul>
+                                            <h6>300</h6>
+                                            <li>#3a3a3a</li>
+                                            <li>RGB(58, 58, 58)</li>
+                                            <li>1 : 11. 37</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner gray4"></div>
+                                        <ul>
+                                            <h6>400</h6>
+                                            <li>#2e2e2e</li>
+                                            <li>RGB(46, 46, 46)</li>
+                                            <li>1 : 13.58</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner gray5"></div>
+                                        <ul>
+                                            <h6>500</h6>
+                                            <li>#232323</li>
+                                            <li>RGB(35, 35, 35)</li>
+                                            <li>1 : 15.72</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3>アクセントカラー</h3>
+                                <p>サイト上でアクセントとなる色です。Minecraftのイメージカラーである緑をベースに微調整しています。</p>
+                                <div class="color_wrapper">
+                                    <div class="color_inner accent_green">
+                                    </div>
+                                    <div class="color_txtbox">
+                                        <h6>Green</h6>
+                                        <ul>
+                                            <li>#527d4f</li>
+                                            <li>RGB(82, 125, 79)</li>
+                                            <li>1 : 4.77</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="color_wrapper grade">
+                                    <div> 
+                                        <div class="color_inner accent_green1"></div>
+                                        
+                                        <ul>
+                                            <h6>Green 100</h6>
+                                            <li>#97b195</li>
+                                            <li>RGB(151, 177, 149)</li>
+                                            <li>1 : 2.32</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner accent_green2"></div>
+                                        <ul>
+                                            <h6>Green 200</h6>
+                                            <li>#759772</li>
+                                            <li>RGB(117, 151, 114)</li>
+                                            <li>1 : 3.27</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner accent_green3"></div>
+                                        <ul>
+                                            <h6>Green 300</h6>
+                                            <li>#527d4f</li>
+                                            <li>RGB(82, 125, 79)</li>
+                                            <li>1 : 4.77</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner accent_green4"></div>
+                                        <ul>
+                                            <h6>Green 400</h6>
+                                            <li>#42643f</li>
+                                            <li>RGB(66, 100, 63)</li>
+                                            <li>1 : 6.72</li>
+                                        </ul>
+                                    </div>
+                                    <div> 
+                                        <div class="color_inner accent_green5"></div>
+                                        <ul>
+                                            <h6>Green 500</h6>
+                                            <li>#314b2f</li>
+                                            <li>RGB(49, 75, 47)</li>
+                                            <li>1 : 9.64</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3>ファンクションカラー</h3>
+                                <div class="color_wrapper">
+                                    <div class="color_inner fn_red">
+                                    </div>
+                                    <div class="color_txtbox">
+                                        <h6>Momiji</h6>
+                                        <ul>
+                                            <li>#c44933</li>
+                                            <li>RGB(196, 73, 51)</li>
+                                            <li>1 : 4.83</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h2 id="typography">タイポグラフィ</h2>
+                                <p>文字って情報の要みたいな部分ですよね。字が小さすぎる、あるいは読みにくいフォントで読めないのは論外ですし、逆に大きすぎて閲覧性を阻害するのはなんかよくないんじゃないんかなーっておもってます（ﾊﾅﾎｼﾞ</p>
+                                <h3>フォント</h3>
+                                <p>全ページにおいて日本語は「<a target="_blank" href="https://fonts.google.com/noto/specimen/Noto+Sans+JP">Noto Sans JP</a>」、英数字は「<a target="_blank" href="https://fonts.google.com/specimen/Manrope">Manrope</a>」を使用しています。GoogleFontsはパフォーマンス的によくないって話をよく聞きますが、楽には抗えないのでしょうがないです。多分誤差です、多分</p>
+                                <p>gridレイアウトにおいて、要素と要素の間のgapは5vw</p>
+                                <h3>行間（line-height）</h3>
+                                <p>行間が終わってる読み物ってたまにありますよね。例えば辞書系の本とか、読み物ではないですがキツキツで読みにくいってことないですか？例えばこんな感じで...</p>
+                                <div class="grid_compare">
+                                    <div class="grid_compare_inner">
+                                        <h6 class="grid_compare_title">line-height: 1</h6>
+                                        <p class="main_txt_1">かつては成人女性全般を「おばさん」と呼んでいた。しかし、語感として年長感があることから、主に中年・初老の女性を指して呼ぶ呼び方になっている。しかし中年の範囲は明確ではなく、何歳までが若い女性で何歳からおばさんにあたるのか、その辺はとても曖昧でデリケートな問題となる。
+                                    </div>
+                                    <div class="grid_compare_inner">
+                                        <h6 class="grid_compare_title">line-height: 2</h6>
+                                        <p>かつては成人女性全般を「おばさん」と呼んでいた。しかし、語感として年長感があることから、主に中年・初老の女性を指して呼ぶ呼び方になっている。しかし中年の範囲は明確ではなく、何歳までが若い女性で何歳からおばさんにあたるのか、その辺はとても曖昧でデリケートな問題となる。
+                                    </div>
+                                </div>
+                                <p class="quote"><a href="https://dic.pixiv.net/a/%E3%81%8A%E3%81%B0%E3%81%95%E3%82%93">おばさん - ピクシブ百科事典</a>, 2024-8-7閲覧</p>
+                                <p>まぁこれは極端な例ですが、つまるところ行間はしっかりあった方が読みやすいよねって話です。コンテンツを壮観してみたときにスクロール/スワイプの回数が増える、一つの画面での情報量の多さが少なくなるという欠点もありますが、当サイトではこのようなコンテンツ部分は2、それ以外の部分は適当な大きさを用いることにしています。</p>
+                                
+                                <h3>角丸の大きさ（border-radius）</h3>
+                                <div class="grid_border">
+                                    <div class="grid_border_1">
+                                    </div>
+                                    <div class="grid_border_2">
+                                    </div>
+                                    <div class="grid_border_3">
+                                    </div>
+                                    <div class="grid_border_4">
+                                    </div>
+                                    <div class="grid_border_5">
+                                    </div>
+                                    <p>8px</p>
+                                    <p>10px</p>
+                                    <p>20px</p>
+                                    <p>50px</p>
+                                    <p>50%</p>
+                                </div>
+                                <p>この中から大きさに合わせて適当なものを使用します。</p>
+                                <table class="table_border">
+                                    <tr>
+                                        <th class="title">大きさ</th>
+                                        <th class="figure">使用用途</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="size">8px</td>
+                                        <td>モバイル画面でのロゴ画像など</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="size">10px</td>
+                                        <td>ギャラリーの画像全般</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="size">20px</td>
+                                        <td>PC向けのメインサイズ。基本となるのはここからです</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="size">50px</td>
+                                        <td>ボタンなど長方形で角丸がめっちゃ大きいやつに</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="size">50%</td>
+                                        <td>円を作りたいときに</td>
+                                    </tr>
+                                </table>
+                                <h2 id="component">コンポーネント</h2>
+                                <h3>ボタン</h3>
+                                <a class="main_btn" href="index.html"><span></span>Button</a>
+                                <p>これをベースに用います</p>
+                        </section>
+                    </div>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_logo">
+                    <span>
+                        <img src="../assets/logo.jpg">
+                    </span>
+                    <p>THANK YOU!!</p>
+                </div>
+                <div class="footer_copy">
+                    <p>©2024 OBASANZ</p>
+                </div>
+                <div class="footer_nav">
+                    <ul>
+                        <li><a href="../index.html#gallery">GALLERY</a></li>
+                        <li><a href="index.html">ABOUT</a></li>
+                        <li><a href="../notes/index.html">NOTES</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer_sns">
+                    <a href="https://x.com/oba_sanz087" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://youtube.com/obasanz087" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/obasanz087" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mm" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div> 
+        </footer>
+    </body>
+</html>
