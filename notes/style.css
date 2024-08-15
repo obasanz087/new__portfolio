@@ -109,11 +109,9 @@ header .nav_wrapper {
 }
 header .nav_wrapper li {
   display: inline-block;
-  margin-left: 2em;
-  padding-left: 0;
-  padding-right: 0;
   letter-spacing: 0.075rem;
   position: relative;
+  margin-left: 2em;
 }
 header .nav_wrapper li a {
   padding: 14px 0;
@@ -127,7 +125,7 @@ header .nav_wrapper li a::before {
   transform: translateX(-50%);
   color: rgba(0, 0, 0, 0);
 }
-header .nav_wrapper li:hover a::before, header .nav_wrapper li.marked a::before {
+header .nav_wrapper li.marked a::before, header .nav_wrapper li:hover a::before {
   color: #527d4f;
 }
 header .nav_wrapper li a:visited {

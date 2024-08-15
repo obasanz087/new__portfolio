@@ -763,7 +763,7 @@ p a:visited:hover {
   background-image: url("../assets/loading.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 75px;
+  background-size: 60px;
 }
 .content_wrapper .btn_block p {
   letter-spacing: 0.075rem;

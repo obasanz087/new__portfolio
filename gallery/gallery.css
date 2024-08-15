@@ -890,7 +890,7 @@ footer {
   background-image: url("../assets/loading.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 75px;
+  background-size: 60px;
 }
 .gallery .gallery_content .next_prev_container {
   margin: 2vw -1vw 0 -1vw;
