@@ -1,0 +1,24 @@
+@use "../assets/css/common";
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 599px)',
+    'tb': 'screen and (max-width: 1024px)',
+    'pc': 'screen and (min-width: 1025px)',
+) !default;
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
+.notice{
+    letter-spacing: .075rem;
+    line-height: 2rem;
+    border: 2px solid common.$white200; 
+    padding:.5rem 0;
+    text-align: center; 
+    border-radius: 15px;
+    margin-bottom:10vw;
+}
