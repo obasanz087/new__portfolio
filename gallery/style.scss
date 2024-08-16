@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-@use "../assets/css/common";
+@use "../assets/css/common"; 
 
 $breakpoints: (
     'sm': 'screen and (max-width: 599px)',
@@ -12,7 +11,7 @@ $breakpoints: (
     }
 }
 .menu_btn{
-    margin-top:0!important;
+    margin-top:0!important; 
 }
 .top_wrapper{
     max-width: 1550px;
@@ -34,7 +33,7 @@ $breakpoints: (
 }
 .content_wrapper{
     @include mq(sm){
-    grid-template-columns: 1fr!important;
+    grid-template-columns: 1fr!important; 
     }
     @include mq(tb){
         grid-template-columns: 1fr 1fr;
@@ -101,106 +100,4 @@ $breakpoints: (
             transform: scale(.95);
         }
     }
-=======
-@use "../assets/css/common";
-
-$breakpoints: (
-    'sm': 'screen and (max-width: 599px)',
-    'tb': 'screen and (max-width: 1024px)',
-) !default;
-
-@mixin mq($breakpoint) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-        @content;
-    }
 }
-
-.top_wrapper{
-    max-width: 1550px;
-    margin:0 auto;
-    padding:5vh 3%;
-    h1{
-        font-size:3rem;
-        font-weight:700;
-        letter-spacing: .2rem;
-        position: relative;
-        color:var(--green300);
-        span{
-            font-size: .8rem;
-            letter-spacing: .05rem;
-            line-height: 1rem;
-            display:block
-        }
-    }
-}
-.content_wrapper{
-    @include mq(sm){
-    grid-template-columns: 1fr!important;
-    }
-    @include mq(tb){
-        grid-template-columns: 1fr 1fr;
-    }
-    max-width: 1440px;
-    margin:0 auto;
-    padding:3vw 3vw 5vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:1vw;
-    .btn_block{
-        width: 100%;
-        position: relative;
-        padding-bottom:1rem;
-        transition: .2s;
-        a{
-            position: absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            height: 100%;
-
-
-        }
-        .img_wrapper{
-            width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            
-            img{
-                width: 100%;
-                border-radius: 10px;
-                transition: .2s;
-                filter: grayscale(35%);
-                background-color: common.$white200;
-                background-image: url('../assets/loading.svg');
-                background-position:center ;
-                background-repeat: no-repeat;
-                background-size: 60px;
-                
-            }
-        }
-        p{
-            letter-spacing: .075rem;
-            font-size:1rem;
-            padding:15px 0 0;
-            display:inline-block;
-            border-bottom:solid 1px common.$white100; 
-        }
-
-        &:hover{
-            .img_wrapper{
-                img{
-                    transform: scale(1.2);
-                    filter: grayscale(0%);
-                }
-            }
-            p{
-                border-bottom:solid 1px common.$black300; 
-            }
-        }
-        &:active{
-            filter: grayscale(100%);
-            transform: scale(.95);
-        }
-    }
->>>>>>> origin/main
-} 
