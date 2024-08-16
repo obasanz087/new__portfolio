@@ -1399,10 +1399,6 @@ p a:visited:hover {
   font-size: 1em;
 }
 
-.menu_btn {
-  margin-top: 0 !important;
-}
-
 .top_wrapper {
   max-width: 1550px;
   margin: 0 auto;
