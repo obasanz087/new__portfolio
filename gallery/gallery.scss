@@ -1,0 +1,420 @@
+@use "../assets/css/common";
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 599px)',
+    'tb': 'screen and (max-width: 1024px)',
+    'pc': 'screen and (min-width: 1025px)',
+) !default;
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+html,body{
+    height:100%;
+}
+ 
+.page_wrapper{
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+}
+main{
+    padding-bottom:196px;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+}
+//menuボタン用　なぜかこれ入れないとレイアウト崩壊
+.menu_btn{
+    top:5vw;
+}
+
+.gallery{
+    max-width: 1550px;
+    margin:0 auto;
+    padding:5vh 3%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap:1vw;
+    @include mq(tb){
+        grid-template-columns: 1fr;
+        padding:5vw;
+    }
+    .gallery_info{
+        grid-column: 1 / 4;
+        padding:1vw 1vw 1vw 0;
+        border-right: solid 2px common.$white200;
+        @include mq(tb){
+            grid-column: 1 / 2;
+            border-right: none;
+        }
+        .gallery_info_container{
+            position: sticky;
+            top:50px;
+        }
+        .building_head{
+            font-size: 3rem;
+            span{
+                display:inline-block;
+                font-size:.85rem;
+                line-height: 1.5rem;
+                padding:0 1rem;
+                border-radius: 50px;
+                border: solid 1px common.$white200;
+                letter-spacing: .05rem;
+                vertical-align: middle;
+                margin-left:.75rem;
+            }
+        }
+        .building_title{
+            font-size:2rem;
+            line-height:2.25rem;
+            margin:1rem 0;
+            
+        }
+        .building_txt{
+            letter-spacing: .075rem;
+            line-height: 2rem;
+        }
+        table{
+            margin-top:2vw;
+            line-height: 30px;
+            letter-spacing: .075rem;
+            th{
+                text-align: left;
+                padding-right:3rem;
+                font-weight: 400;
+                width: 52px;
+            }
+            td{
+                a{
+                    color: common.$green300;
+                    position: relative;
+                    padding-right:35px;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                        &::after{
+                            width: 20px;
+                            height: 20px;
+                            right:7.5px;
+                            animation: tweet_link_in .2s forwards;
+                            @keyframes tweet_link_in {
+                                0%{
+                                    width: 4px;
+                                    height: 4px;
+                                    right:15px;
+                                }
+                                100%{
+                                    width: 20px;
+                                    height: 20px;
+                                    right:7.5px;
+                                }
+                            }
+                        }
+                        &::before{
+                            content:'\f061';
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            position: absolute;
+                            top:50%;
+                            right:25px;
+                            transform: translateY(-50%);
+                            color:common.$white100;
+                            font-size:.7rem;
+                            z-index: 51;
+                            animation:tweet_link_arrow .3s forwards;
+                            @keyframes tweet_link_arrow{
+                                0%{
+                                    right:25px;
+                                    z-index: -1;
+                                }
+                                50%{
+                                    right:25px;
+                                    z-index: -1;
+                                }
+                                100%{
+                                    right:12px;
+                                    z-index: 51;
+                                }
+                            }
+                        }
+                    }
+                    &::after{
+                        content:'';
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background-color: common.$green300;
+                        position: absolute;
+                        top:50%;
+                        transform: translateY(-50%);
+                        right:15px;
+                        animation: tweet_link_out .2s forwards;
+                        @keyframes tweet_link_out {
+                            0%{
+                                width: 20px;
+                                height: 20px;
+                                right:7.5px;
+                            }
+                            100%{
+                                width: 4px;
+                                height: 4px;
+                                right:15px;
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+    .gallery_content{
+        grid-column:4 / 12 ;
+        padding:1vw 0;
+        @include mq(tb){
+            grid-column: 1 / 2;
+        }
+        .img_grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1vw;
+            @include mq(sm){
+                grid-template-columns: 1fr;
+                gap:5vw;
+            }
+            div{
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    background-color: common.$white200;
+                    background-image: url('../assets/loading.svg');
+                    background-position:center ;
+                    background-repeat: no-repeat;
+                    background-size: 60px;
+                }
+            }
+        }
+        .next_prev_container{
+            margin:2vw -1vw 0 -1vw;
+            @include mq(sm){
+                margin:5vw 0 calc(100px + 10vw);
+                display:grid;
+                grid-template-columns:1fr 1fr ;
+                gap: 3vw;
+            }
+
+            .prev_btn_wrapper,.next_btn_wrapper{
+                transition: .2s;
+                border: solid 1px common.$white200;
+                &:hover{
+                    background: common.$white200;
+                    border: solid 1px common.$black200;
+                }
+                margin:0 1vw;
+                @include mq(sm){
+                    font-size:.9rem
+                }
+            }
+            .prev_btn_wrapper{
+                .prev_btn{
+                    padding:20px 25px 20px 45px;
+                    @include mq(sm){
+                        padding:0 0 0 30px;
+                        width: calc(100% - 30px); 
+                        display:block;
+                    }
+                    line-height: 60px; 
+                    letter-spacing: .075rem;
+                    position: relative;
+                    &::before{
+                        content:'';
+                        background: common.$green300;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top:50%;
+                        transform: translateY(-50%);
+                        left:25px;
+                        @include mq(sm){
+                            left:15px;
+                        }
+                        @include mq(pc){
+                            animation: prev_btn_out .2s forwards;
+                            @keyframes prev_btn_out {
+                                0%{
+                                    width: 20px;
+                                    height: 20px;
+                                    left:15px;
+                                }
+                                100%{
+                                    width: 4px;
+                                    height: 4px;
+                                    right:25px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        &::before{
+                            @include mq(pc){
+                                animation: prev_btn_in .2s forwards;
+                                @keyframes prev_btn_in {
+                                    0%{
+                                        width: 4px;
+                                        height: 4px;
+                                        right:25px;
+                                    }
+                                    100%{
+                                        width: 20px;
+                                        height: 20px;
+                                        left:15px;
+                                    }
+                                }
+                            }
+                        }
+                        &::after{
+                            @include mq(pc){
+                                content:'\f060';
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                position: absolute;
+                                top:50%;
+                                transform: translateY(-50%);
+                                left:37px;
+                                font-size:.7rem;
+                                color:common.$white100;
+                                animation: prev_btn_arrow .3s forwards  ease-in-out;
+                                @keyframes prev_btn_arrow {
+                                    0%{
+                                        right:37px;
+                                        z-index: -1;
+                                        
+                                    }
+                                    50%{
+                                        right:37px;
+                                    }
+                                    100%{
+                                        left:21px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                display:inline-block;
+                border-radius: 10px;
+            }
+            .next_btn_wrapper{
+                .next_btn{
+                    padding:20px 45px 20px 25px;
+                    @include mq(sm){
+                        padding:0 30px 0 0px;
+                        display:block;
+                        width: calc(100% - 30px);
+                        text-align: right;
+                    }
+                    line-height: 60px; 
+                    letter-spacing: .075rem;
+                    position: relative;
+                    &::before{
+                        content:'';
+                        background: common.$green300;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top:50%;
+                        transform: translateY(-50%);
+                        right:25px;
+                        @include mq(sm){
+                            right:15px;
+                        }
+                        @include mq(pc){
+                            animation: next_btn_out .2s forwards;
+                            @keyframes next_btn_out {
+                                0%{
+                                    width: 20px;
+                                    height: 20px;
+                                    right:15px;
+                                }
+                                100%{
+                                    width: 4px;
+                                    height: 4px;
+                                    right:25px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        &::before{
+                            @include mq(pc){
+                                animation: next_btn_in .2s forwards;
+                                @keyframes next_btn_in {
+                                    0%{
+                                        width: 4px;
+                                        height: 4px;
+                                        right:25px;
+                                    }
+                                    100%{
+                                        width: 20px;
+                                        height: 20px;
+                                        right:15px;
+                                    }
+                                }
+                            }
+                        }
+                        &::after{
+                            @include mq(pc){
+                                content:'\f061';
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                position: absolute;
+                                top:50%;
+                                transform: translateY(-50%);
+                                right:35px;
+                                font-size:.7rem;
+                                color:common.$white100;
+                                animation: next_btn_arrow .3s forwards;
+                                @keyframes next_btn_arrow {
+                                    0%{
+                                        right:35px;
+                                        z-index: -1;
+                                    }
+                                    50%{
+                                        right:35px;
+                                        z-index: -1;
+                                    }
+                                    100%{
+                                        right:19px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                display:inline-block;
+                border-radius: 10px;
+
+            }
+        }
+    }
+    h1{
+        font-size:3rem;
+        font-weight:700;
+        letter-spacing: .2rem;
+        position: relative;
+        color:#3a3a3a;
+        span{
+            font-size: .8rem;
+            letter-spacing: .05rem;
+            line-height: 1rem;
+            display:block
+        }
+    } 
+}
