@@ -1519,6 +1519,7 @@ p a:visited:hover {
 }
 .content_wrapper table tr td p {
   position: absolute;
+  letter-spacing: 0.05em;
   top: 50%;
   transform: translateY(-50%);
   left: 25px;
