@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "common"; 
 
 $breakpoints: (
@@ -58,4 +59,66 @@ footer{
 h2{
     font-size:20px!important;
     margin-top:0!important;
+=======
+@use "common"; 
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 599px)',
+    'tb': 'screen and (max-width: 1024px)',
+    'pc': 'screen and (min-width: 600px)',
+    'pc2': 'screen and (min-width: 1025px)',
+) !default;
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.page_wrapper{
+    width: 100%;
+    position: relative;
+    min-height: 100dvh;
+}
+footer{
+    margin-top:10vw;
+    @include mq(pc){
+    position:absolute;
+    bottom:0;
+    }
+}
+.top_wrapper{
+    @include mq(pc2){
+        max-width: 1000px!important;
+        padding-left:0vw!important;
+    }
+}
+.content_wrapper{
+    position: relative;
+    max-width: 1000px!important;
+    img{
+        @include mq(sm){
+            width: 100px;
+            bottom: 5vw;
+            right:5vw; 
+        }
+        position: absolute;
+        @include mq(pc){
+            top:3vw;
+            right:5vw;
+            width: 200px;
+        }
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px common.$white300;
+    }
+    p{ 
+        letter-spacing: .05em;  
+        line-height: 2;
+    }
+}
+h2{
+    font-size:20px!important;
+    margin-top:0!important;
+>>>>>>> origin/main
 }

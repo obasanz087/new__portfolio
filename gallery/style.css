@@ -699,10 +699,13 @@ p a:visited:hover {
   font-size: 1em;
 }
 
+<<<<<<< HEAD
 .menu_btn {
   margin-top: 0 !important;
 }
 
+=======
+>>>>>>> origin/main
 .top_wrapper {
   max-width: 1550px;
   margin: 0 auto;
