@@ -13,7 +13,7 @@ $breakpoints: (
 }
 
 .content_wrapper{
-    max-width: 1440px;
+    max-width: 800px!important; 
     margin:0 auto;
     padding:3vw 3vw 5vw;
     p{
@@ -21,130 +21,114 @@ $breakpoints: (
         color:#3a3a3a;
     }
     .about_intro_wrapper{
-        display:flex;
-        gap:5rem;
         margin-bottom:5vw;
-        @include mq(tb){
-            display:block;
+    }
+    .text{
+        flex:2;
+        @include mq(sm){
+            margin-bottom:5vw;
         }
-
-        .text{
-            flex:1;
-            @include mq(sm){
-                margin-bottom:5vw;
-            }
-            p{
-                padding-bottom:1rem; 
-            }
-            .img_wrapper{
-                width: 100%;
-                margin-bottom:15px;
-                img{
-                    width: 100%;
-                    border-radius: 10px;
-                }
-                div{
-                    font-size:.85em;
-                    margin-top:5px;
-                    &::before{
-                        content: "↑";
-                        margin-right:.5em;
-                    }
-                }
-            }
+        p{
+            padding-bottom:1rem; 
         }
-        .image{
-            flex:1;
-            background: common.$white100;
+        .img_wrapper{
             width: 100%;
-            height: auto;
-            border-radius: 20px;
-            @include mq(sm){
-                display:none;
+            margin-bottom:15px;
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
+            div{
+                font-size:.85em;
+                margin-top:5px;
+                &::before{
+                    content: "↑";
+                    margin-right:.5em;
+                }
             }
         }
     }
-    table{
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-        tr{
-            border-bottom: solid 1px common.$white200;
-            &.border_none{
-                border-bottom: none;
-            }
-            th{
-                text-align: left;
-                border-right: 1px solid common.$white200;
-                font-weight: 400;
-                padding:20px 25px 20px 0;
-                @include mq(sm){
-                    padding-right:5px; 
-                }
-                p{
-                    padding:0!important;
-                }
-                .title{
-                    font-size: 1em;
-                    line-height: 1.1;
-                    letter-spacing: .05em;
-                }
-                .caption{
-                    font-size: .7em;
-                    line-height: 1;
-                    margin-top:5px;
-                }
-            }
-            td{
-                position: relative;
-                transition: .2s;
-                
-                &:hover{
-                    background: common.$white200;
-                }
-                &.preparing{
-                    background: common.$black300;
-                    p{
-                        color:common.$white100;
-                        &::after{
-                            content:"\e5cd";
-                            font-family: "Material Icons";
-                        }
-                    }
-                    
-                }
-                width: 70%;
-                a{
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top:0;
-                    left:0;
-                    z-index: 51;
-                }
-                p{
-                    position: absolute;
-                    letter-spacing: .05em;
-                    top:50%;
-                    transform: translateY(-50%); 
-                    left:25px;
-                    right:25px;
-                    z-index: 50;
-                    @include mq(sm){
-                        left:15px;
-                        right:15px;
-                    }
-                    line-height: 1;
-                    padding:0!important;
-                    &::after{
-                        content:"\f1df";
-                        font-family: "Material Icons";
-                        position: absolute;
-                        right:0px;
-                    }
-                }
-            }
-
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    tr{
+        border-bottom: solid 1px common.$white200;
+        &.border_none{
+            border-bottom: none;
         }
+        th{
+            text-align: left;
+            border-right: 1px solid common.$white200;
+            font-weight: 400;
+            padding:20px 25px 20px 0;
+            @include mq(sm){
+                padding-right:5px; 
+            }
+            p{
+                padding:0!important;
+            }
+            .title{
+                font-size: 1em;
+                line-height: 1.1;
+                letter-spacing: .05em;
+            }
+            .caption{
+                font-size: .7em;
+                line-height: 1;
+                margin-top:5px;
+            }
+        }
+        td{
+            position: relative;
+            transition: .2s;
+            
+            &:hover{
+                background: common.$white200;
+            }
+            &.preparing{
+                background: common.$black300;
+                p{
+                    color:common.$white100;
+                    &::after{
+                        content:"\e5cd";
+                        font-family: "Material Icons";
+                    }
+                }
+                
+            }
+            width: 70%;
+            a{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top:0;
+                left:0;
+                z-index: 51;
+            }
+            p{
+                position: absolute;
+                letter-spacing: .05em;
+                top:50%;
+                transform: translateY(-50%); 
+                left:25px;
+                right:25px;
+                z-index: 50;
+                @include mq(sm){
+                    left:15px;
+                    right:15px;
+                }
+                line-height: 1;
+                padding:0!important;
+                &::after{
+                    content:"\f1df";
+                    font-family: "Material Icons";
+                    position: absolute;
+                    right:0px;
+                }
+            }
+        }
+
     }
 }

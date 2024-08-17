@@ -1400,7 +1400,7 @@ p a:visited:hover {
 }
 
 .content_wrapper {
-  max-width: 1440px;
+  max-width: 800px !important;
   margin: 0 auto;
   padding: 3vw 3vw 5vw;
 }
@@ -1409,108 +1409,90 @@ p a:visited:hover {
   color: #3a3a3a;
 }
 .content_wrapper .about_intro_wrapper {
-  display: flex;
-  gap: 5rem;
   margin-bottom: 5vw;
 }
-@media screen and (max-width: 1024px) {
-  .content_wrapper .about_intro_wrapper {
-    display: block;
-  }
-}
-.content_wrapper .about_intro_wrapper .text {
-  flex: 1;
+.content_wrapper .text {
+  flex: 2;
 }
 @media screen and (max-width: 599px) {
-  .content_wrapper .about_intro_wrapper .text {
+  .content_wrapper .text {
     margin-bottom: 5vw;
   }
 }
-.content_wrapper .about_intro_wrapper .text p {
+.content_wrapper .text p {
   padding-bottom: 1rem;
 }
-.content_wrapper .about_intro_wrapper .text .img_wrapper {
+.content_wrapper .text .img_wrapper {
   width: 100%;
   margin-bottom: 15px;
 }
-.content_wrapper .about_intro_wrapper .text .img_wrapper img {
+.content_wrapper .text .img_wrapper img {
   width: 100%;
   border-radius: 10px;
 }
-.content_wrapper .about_intro_wrapper .text .img_wrapper div {
+.content_wrapper .text .img_wrapper div {
   font-size: 0.85em;
   margin-top: 5px;
 }
-.content_wrapper .about_intro_wrapper .text .img_wrapper div::before {
+.content_wrapper .text .img_wrapper div::before {
   content: "↑";
   margin-right: 0.5em;
 }
-.content_wrapper .about_intro_wrapper .image {
-  flex: 1;
-  background: #fff;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-@media screen and (max-width: 599px) {
-  .content_wrapper .about_intro_wrapper .image {
-    display: none;
-  }
-}
-.content_wrapper table {
+
+table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
 }
-.content_wrapper table tr {
+table tr {
   border-bottom: solid 1px #e6e6e6;
 }
-.content_wrapper table tr.border_none {
+table tr.border_none {
   border-bottom: none;
 }
-.content_wrapper table tr th {
+table tr th {
   text-align: left;
   border-right: 1px solid #e6e6e6;
   font-weight: 400;
   padding: 20px 25px 20px 0;
 }
 @media screen and (max-width: 599px) {
-  .content_wrapper table tr th {
+  table tr th {
     padding-right: 5px;
   }
 }
-.content_wrapper table tr th p {
+table tr th p {
   padding: 0 !important;
 }
-.content_wrapper table tr th .title {
+table tr th .title {
   font-size: 1em;
   line-height: 1.1;
   letter-spacing: 0.05em;
 }
-.content_wrapper table tr th .caption {
+table tr th .caption {
   font-size: 0.7em;
   line-height: 1;
   margin-top: 5px;
 }
-.content_wrapper table tr td {
+table tr td {
   position: relative;
   transition: 0.2s;
   width: 70%;
 }
-.content_wrapper table tr td:hover {
+table tr td:hover {
   background: #e6e6e6;
 }
-.content_wrapper table tr td.preparing {
+table tr td.preparing {
   background: #3a3a3a;
 }
-.content_wrapper table tr td.preparing p {
+table tr td.preparing p {
   color: #fff;
 }
-.content_wrapper table tr td.preparing p::after {
+table tr td.preparing p::after {
   content: "\e5cd";
   font-family: "Material Icons";
 }
-.content_wrapper table tr td a {
+table tr td a {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1518,7 +1500,7 @@ p a:visited:hover {
   left: 0;
   z-index: 51;
 }
-.content_wrapper table tr td p {
+table tr td p {
   position: absolute;
   letter-spacing: 0.05em;
   top: 50%;
@@ -1530,12 +1512,12 @@ p a:visited:hover {
   padding: 0 !important;
 }
 @media screen and (max-width: 599px) {
-  .content_wrapper table tr td p {
+  table tr td p {
     left: 15px;
     right: 15px;
   }
 }
-.content_wrapper table tr td p::after {
+table tr td p::after {
   content: "\f1df";
   font-family: "Material Icons";
   position: absolute;
