@@ -120,14 +120,16 @@ $breakpoints: (
                     position: absolute;
                     top:0;
                     left:0;
+                    z-index: 51;
                 }
                 p{
                     position: absolute;
                     letter-spacing: .05em;
                     top:50%;
-                    transform: translateY(-50%);
+                    transform: translateY(-50%); 
                     left:25px;
                     right:25px;
+                    z-index: 50;
                     @include mq(sm){
                         left:15px;
                         right:15px;

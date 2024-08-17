@@ -1480,6 +1480,5 @@ p a:visited:hover {
   border-bottom: solid 1px #3a3a3a;
 }
 .content_wrapper .btn_block:active {
-  filter: grayscale(100%);
   transform: scale(0.95);
 }/*# sourceMappingURL=style.css.map */

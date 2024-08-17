@@ -93,7 +93,6 @@ $breakpoints: (
             }
         }
         &:active{
-            filter: grayscale(100%);
             transform: scale(.95);
         }
     }
