@@ -94,6 +94,18 @@ footer{
                 width: 52px;
             }
             td{
+                .small{
+                    font-size:.7em;
+                    line-height: 1.25;
+                    margin-bottom:5px;
+                    a{
+                        &::after,&::before{
+                            display:none!important;
+                        }
+                        text-decoration: none;
+                        padding-right:0px;
+                    }
+                } 
                 a{
                     color: common.$green300;
                     position: relative;

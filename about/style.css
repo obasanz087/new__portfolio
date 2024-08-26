@@ -675,6 +675,10 @@ p a:visited:hover {
   border: none;
   color: #314b2f;
 }
+p.small_notice {
+  font-size: 0.8em;
+  color: #898989;
+}
 
 .notice_wrapper {
   background: #e6e6e6;
@@ -1297,6 +1301,9 @@ footer .footer_inner .footer_sns {
   footer .footer_inner .footer_sns {
     text-align: right;
     margin-top: 8px;
+  }
+  footer .footer_inner .footer_sns .ds_none_sp {
+    display: none;
   }
 }
 footer .footer_inner .footer_sns a {

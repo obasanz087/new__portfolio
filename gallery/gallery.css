@@ -675,6 +675,10 @@ p a:visited:hover {
   border: none;
   color: #314b2f;
 }
+p.small_notice {
+  font-size: 0.8em;
+  color: #898989;
+}
 
 .notice_wrapper {
   background: #e6e6e6;
@@ -1298,6 +1302,9 @@ footer .footer_inner .footer_sns {
     text-align: right;
     margin-top: 8px;
   }
+  footer .footer_inner .footer_sns .ds_none_sp {
+    display: none;
+  }
 }
 footer .footer_inner .footer_sns a {
   line-height: 40px;
@@ -1488,6 +1495,18 @@ footer {
   padding-right: 3rem;
   font-weight: 400;
   width: 52px;
+}
+.gallery .gallery_info table td .small {
+  font-size: 0.7em;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+.gallery .gallery_info table td .small a {
+  text-decoration: none;
+  padding-right: 0px;
+}
+.gallery .gallery_info table td .small a::after, .gallery .gallery_info table td .small a::before {
+  display: none !important;
 }
 .gallery .gallery_info table td a {
   color: #527d4f;
