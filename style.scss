@@ -225,10 +225,10 @@ main{
             }
         }
         .eigoheta{
-            font-size:.6rem;
+            font-size:.7em;
             font-weight: 400;
             line-height: 4;
-            opacity: .4;
+            color:common.$black100;
             padding:0;
         }
     }
@@ -406,6 +406,9 @@ main{
 
 .gallery_scroll_wrapper{
     width: 100%;
+    @include mq(sm){
+        height: 500px;
+    }
     overflow: hidden;
     border-radius: 20px;
     
@@ -413,6 +416,10 @@ main{
         display: inline-block;
         width: calc((500px + 5px) * 14);
         animation: gallery_scroll 50s linear infinite;
+        @include mq(sm){
+            width: 100%;
+            animation: gallery_scroll_sm 30s linear infinite;
+        }
         height: auto;
         @keyframes gallery_scroll{
             0%{
@@ -422,8 +429,21 @@ main{
                 transform: translateX(-3535px);
             }
         }
+        @keyframes gallery_scroll_sm{
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(-1500px);
+            }
+        }
         .scroll_img_container{
             width: 500px;
+            @include mq(sm){
+                width: 100%;
+                border-bottom: 5px solid common.$white100;
+                border-left:none!important ;
+            }
             display: inline-block;
             border-left: 5px solid common.$white100;
             position: relative;

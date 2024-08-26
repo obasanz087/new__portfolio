@@ -685,6 +685,10 @@ p{
             }
         }
     }
+    &.small_notice{
+        font-size:.8em;
+        color:$black100;
+    }
 }
 
 .notice_wrapper{
@@ -1323,6 +1327,9 @@ footer{
             @include mq(sm){
                 text-align: right;
                 margin-top:8px;
+                .ds_none_sp{
+                    display:none;
+                }
            }
             a{
                 line-height: 40px;
