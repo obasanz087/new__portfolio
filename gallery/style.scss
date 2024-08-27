@@ -31,7 +31,11 @@ $breakpoints: (
 .page_top_btn_wrapper{ 
     position: fixed;
     bottom:2vw;
-    right:2vw; 
+    right:2vw;
+    @include mq(sm){
+        bottom:5vw;
+        right:5vw;
+        }
     width: 60px;
     height: 60px;
     border: solid 1px common.$white200;
