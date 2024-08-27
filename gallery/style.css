@@ -1425,6 +1425,36 @@ p a:visited:hover {
   display: block;
 }
 
+.page_top_btn_wrapper {
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  width: 60px;
+  height: 60px;
+  border: solid 1px #e6e6e6;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.2s;
+  z-index: 55;
+}
+.page_top_btn_wrapper span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.page_top_btn_wrapper:hover {
+  background: #e6e6e6;
+  border: solid 1px #3a3a3a;
+}
+.page_top_btn_wrapper a {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .content_wrapper {
   max-width: 1440px;
   margin: 0 auto;

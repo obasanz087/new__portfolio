@@ -27,6 +27,35 @@ $breakpoints: (
             display:block
         }
     }
+} 
+.page_top_btn_wrapper{ 
+    position: fixed;
+    bottom:2vw;
+    right:2vw; 
+    width: 60px;
+    height: 60px;
+    border: solid 1px common.$white200;
+    background: common.$white100;
+    border-radius: 10px;
+    transition: .2s;
+    z-index: 55;
+    span{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    &:hover{
+        background: common.$white200;
+        border: solid 1px common.$black300;
+    }
+    a{
+        top:0;
+        left:0;
+        position: absolute;
+        width: 100%;
+        height:100%;
+    }
 }
 .content_wrapper{
     @include mq(sm){
