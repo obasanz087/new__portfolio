@@ -1,0 +1,91 @@
+@use "../../assets/css/common";
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 599px)',
+    'tb': 'screen and (max-width: 1024px)',
+    'pc': 'screen and (min-width: 1025px)',
+) !default;
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.content_wrapper{
+    max-width: 1240px!important;
+    display:flex;
+    gap:5vw;
+    .index_container{
+        flex:1;
+        border-right:solid 2px common.$white200;
+        padding-right:5vw;
+        .index_wrapper{
+            position: sticky;
+            top:100px;
+        }
+        h2{
+            font-size:1rem;
+            letter-spacing: 0.05em;
+        }
+    }
+    .content_container{
+        max-width: 850px;
+        flex:5;
+        p{
+            line-height: 2;
+            margin-bottom:1em; 
+        }
+        .quote{
+            padding:20px 2em calc(20px - 1em);
+            background: common.$white200;
+            border-radius: 20px;
+            margin-bottom:1em; 
+
+            .quote_address{
+                font-size: .85em;
+                &::before{
+                    content: "";
+                    width: 2em;
+                    height: 1px;
+                    background: common.$black200;
+                    display:inline-block;
+                    margin-right: 1.5em;
+                }
+            }
+        }
+        .notice{
+            padding:20px 2em calc(20px - 1em);
+            background: common.$white200;
+            border-radius: 20px;
+            display:flex;
+            gap:1em;
+            i{
+                display:block;
+                color:common.$fn-red;
+                line-height: 2;
+                font-size:1.1em;
+            }
+            .notice_inner{
+                .notice_title{
+                    font-size:1em;
+                    letter-spacing: 0;
+                    line-height: 2;
+                }
+            }
+        }
+        .txt_list{
+            list-style: none;
+            padding-left: 0;
+            li{
+                line-height: 2;
+                &::before{
+                    content: "●";
+                    font-size:.5em;
+                    padding-right:1rem;
+                    color:common.$black300
+                }
+            }
+        }
+    }
+}

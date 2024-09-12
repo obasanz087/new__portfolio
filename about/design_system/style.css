@@ -718,122 +718,77 @@ p.small_notice {
   font-size: 1em;
 }
 
-.top_wrapper {
-  max-width: 1550px;
-  margin: 0 auto;
-  padding: 5vh 3%;
-}
-.top_wrapper h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-  position: relative;
-  color: var(--green300);
-}
-.top_wrapper h1 span {
-  font-size: 0.8rem;
-  letter-spacing: 0.05rem;
-  line-height: 1rem;
-  display: block;
-}
-
-.page_top_btn_wrapper {
-  position: fixed;
-  bottom: 2vw;
-  right: 2vw;
-  width: 60px;
-  height: 60px;
-  border: solid 1px #e6e6e6;
-  background: #fff;
-  border-radius: 10px;
-  transition: 0.2s;
-  z-index: 55;
-}
-@media screen and (max-width: 599px) {
-  .page_top_btn_wrapper {
-    bottom: 5vw;
-    right: 5vw;
-  }
-}
-.page_top_btn_wrapper span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.page_top_btn_wrapper:hover {
-  background: #e6e6e6;
-  border: solid 1px #3a3a3a;
-}
-.page_top_btn_wrapper a {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 .content_wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 3vw 3vw 5vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1vw;
+  max-width: 1240px !important;
+  display: flex;
+  gap: 5vw;
 }
-@media screen and (max-width: 599px) {
-  .content_wrapper {
-    grid-template-columns: 1fr !important;
-  }
+.content_wrapper .index_container {
+  flex: 1;
+  border-right: solid 2px #e6e6e6;
+  padding-right: 5vw;
 }
-@media screen and (max-width: 1024px) {
-  .content_wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
+.content_wrapper .index_container .index_wrapper {
+  position: sticky;
+  top: 100px;
 }
-.content_wrapper .btn_block {
-  width: 100%;
-  position: relative;
-  padding-bottom: 1rem;
-  transition: 0.2s;
-}
-.content_wrapper .btn_block a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.content_wrapper .btn_block .img_wrapper {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.content_wrapper .btn_block .img_wrapper img {
-  width: 100%;
-  border-radius: 10px;
-  transition: 0.2s;
-  filter: grayscale(35%);
-  background-color: #e6e6e6;
-  background-image: url("../assets/loading.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60px;
-}
-.content_wrapper .btn_block p {
-  letter-spacing: 0.075rem;
+.content_wrapper .index_container h2 {
   font-size: 1rem;
-  padding: 15px 0 0;
+  letter-spacing: 0.05em;
+}
+.content_wrapper .content_container {
+  max-width: 850px;
+  flex: 5;
+}
+.content_wrapper .content_container p {
+  line-height: 2;
+  margin-bottom: 1em;
+}
+.content_wrapper .content_container .quote {
+  padding: 20px 2em calc(20px - 1em);
+  background: #e6e6e6;
+  border-radius: 20px;
+  margin-bottom: 1em;
+}
+.content_wrapper .content_container .quote .quote_address {
+  font-size: 0.85em;
+}
+.content_wrapper .content_container .quote .quote_address::before {
+  content: "";
+  width: 2em;
+  height: 1px;
+  background: #616161;
   display: inline-block;
-  border-bottom: solid 1px #fff;
+  margin-right: 1.5em;
 }
-.content_wrapper .btn_block:hover .img_wrapper img {
-  transform: scale(1.2);
-  filter: grayscale(0%);
+.content_wrapper .content_container .notice {
+  padding: 20px 2em calc(20px - 1em);
+  background: #e6e6e6;
+  border-radius: 20px;
+  display: flex;
+  gap: 1em;
 }
-.content_wrapper .btn_block:hover p {
-  border-bottom: solid 1px #3a3a3a;
+.content_wrapper .content_container .notice i {
+  display: block;
+  color: #c44933;
+  line-height: 2;
+  font-size: 1.1em;
 }
-.content_wrapper .btn_block:active {
-  transform: scale(0.95);
+.content_wrapper .content_container .notice .notice_inner .notice_title {
+  font-size: 1em;
+  letter-spacing: 0;
+  line-height: 2;
+}
+.content_wrapper .content_container .txt_list {
+  list-style: none;
+  padding-left: 0;
+}
+.content_wrapper .content_container .txt_list li {
+  line-height: 2;
+}
+.content_wrapper .content_container .txt_list li::before {
+  content: "●";
+  font-size: 0.5em;
+  padding-right: 1rem;
+  color: #3a3a3a;
 }/*# sourceMappingURL=style.css.map */

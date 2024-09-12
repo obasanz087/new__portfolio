@@ -443,22 +443,11 @@ header .nav_wrapper_sp .nav_sns p {
   }
 }
 h2 {
-  letter-spacing: 0.15rem;
   font-size: 2rem;
   position: relative;
+  font-weight: 500;
   color: #3a3a3a;
   margin: 1rem 0;
-}
-h2 span {
-  color: #b8b8b8;
-  font-size: 0.85rem;
-  line-height: 2.5rem;
-  font-weight: 500;
-}
-h2 span::before {
-  content: "";
-  padding: 0 0.5rem;
-  font-size: 2.5rem;
 }
 
 h3 {
