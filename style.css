@@ -443,22 +443,11 @@ header .nav_wrapper_sp .nav_sns p {
   }
 }
 h2 {
-  letter-spacing: 0.15rem;
   font-size: 2rem;
   position: relative;
+  font-weight: 500;
   color: #3a3a3a;
   margin: 1rem 0;
-}
-h2 span {
-  color: #b8b8b8;
-  font-size: 0.85rem;
-  line-height: 2.5rem;
-  font-weight: 500;
-}
-h2 span::before {
-  content: "";
-  padding: 0 0.5rem;
-  font-size: 2.5rem;
 }
 
 h3 {
@@ -1029,7 +1018,6 @@ main h1 span {
 .topview_container .topview_sns {
   grid-column: 4/8;
   grid-row: 5/6;
-  border-radius: 20px;
   position: relative;
 }
 @media screen and (max-width: 599px) {
@@ -1045,7 +1033,8 @@ main h1 span {
 .topview_container .topview_sns span a {
   font-size: 1.1rem;
   letter-spacing: 0.075rem;
-  padding: 14px 1.25rem 14px 2rem;
+  padding: 20px 1.25em 20px 0;
+  margin: 0 17.5px;
   color: #3a3a3a;
   position: relative;
 }
@@ -1107,14 +1096,17 @@ main h1 span {
   0% {
     color: rgba(236, 236, 236, 0);
     right: 15px;
+    z-index: 0;
   }
   50% {
     color: rgba(236, 236, 236, 0);
     right: 15px;
+    z-index: 0;
   }
   100% {
-    color: #ececec;
+    color: #fff;
     right: -3px;
+    z-index: 100;
   }
 }
 

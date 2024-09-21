@@ -308,7 +308,6 @@ main{
             display:none;
         }
         grid-row: 5 / 6;
-        border-radius: 20px;
         position: relative;
         span{
             bottom:0;
@@ -317,7 +316,8 @@ main{
             a{
                 font-size:1.1rem;
                 letter-spacing: 0.075rem;
-                padding:14px 1.25rem 14px 2rem;
+                padding:20px 1.25em 20px 0;
+                margin:0 17.5px;
                 color:common.$black300;
                 position: relative;
                 &:visited{
@@ -376,14 +376,17 @@ main{
                             0%{
                                 color:rgba(236, 236, 236,0);
                                 right:15px;
+                                z-index: 0;
                             }
                             50%{
                                 color:rgba(236, 236, 236,0);
                                 right:15px;
+                                z-index: 0;
                             }
                             100%{
-                                color:#ececec;
+                                color:common.$white100;
                                 right:-3px;
+                                z-index: 100;
                             }
                         }
                     }
