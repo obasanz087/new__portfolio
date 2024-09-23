@@ -80,6 +80,16 @@ header{
                     color:$white200;
                 }
             }
+            &::after{
+                content:'© 2024 OBASANZ';
+                position: fixed;
+                bottom:5vw;
+                left:5vw;
+                color:$black200;
+                letter-spacing: 0.05em;
+                font-size: 14px;
+                font-weight: 500;
+            }
         }
         img{
             width: 50px;
@@ -255,7 +265,7 @@ header{
             .close1{
                 position: absolute;
                 bottom:12px;
-                right:0;
+                right:3px;
                 height: 1px;
                 width: 21px;
                 transform: rotate(45deg);
@@ -264,8 +274,7 @@ header{
             .close2{
                 position: absolute;
                 bottom:12px;
-                right:0;
-      
+                right:3px;
                 height: 1px;
                 width: 21px;
                 transform: rotate(-45deg);
@@ -470,7 +479,6 @@ header{
 h2{
     font-size:2rem;
     position: relative;
-    font-weight: 500;
     color:$black300;
     margin:1rem 0;
 }
@@ -478,7 +486,6 @@ h3{
     color:$black300;
     letter-spacing:0.025em ;
     margin-bottom:10px;
-    
 }
 footer{
     width: 100%;
@@ -535,13 +542,14 @@ footer{
         }
         .footer_copy{
             line-height: 40px;
-            margin-top:1rem;
+            margin-top:14px;
             @include mq(sm){
                 margin-top:calc(2rem + 160px);
            }
            p{
             color:$white200;
-            letter-spacing: .1rem;
+            letter-spacing: .1em;
+            font-size:14px;
            }
         }
         .footer_nav{
