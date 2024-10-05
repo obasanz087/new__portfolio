@@ -50,7 +50,7 @@ header{
     position: relative;
     @include mq(sm){
         padding:0 5% ;
-        line-height: 1.2;
+        line-height: 1.2; 
         position: relative;
     }
     a:visited{
@@ -100,7 +100,6 @@ header{
                 height: 25px;
                 border-radius: 7.5px;
                 vertical-align: middle;
-
             }
         }
         a{
@@ -375,17 +374,22 @@ header{
     border: solid 1px $white200;
     display:inline-block;
     margin:0 0 15px;
-    &::after{
+    &::before{
         content: '';
-        width: 100%;
+        width: calc(100% - 20px - 16px - 20px - 5px);
         height: 1px;
         display:inline-block;
         background: $white100;
+        position: absolute;
+        bottom:15px;
+        transform-origin: left top;
+        transform: scale(0,1);
+        transition: .2s;
     }
     .fa-brands{
         padding-right:16px;
     }
-    &::before{
+    &::after{
         content:'';
         width: 5px;
         height: 5px;
@@ -396,20 +400,21 @@ header{
         top:50%;
         transform: translateY(-50%);
         animation: btn_hover_out .2s;
-        
+
     }
     &:hover{
         background: $white200;
         color:$black300;
         border: solid 1px $black100;
-        &::before{
+        &::after{
             width: 20px;
             height: 20px;
             right:12.5px;
             animation: btn_hover_in .2s;
         }
-        &::after{
+        &::before{
             background: $black300;
+            transform: scale(1,1);
         }
         span::after{
             animation: btn_hover_arrow_in .4s forwards ;

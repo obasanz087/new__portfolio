@@ -111,7 +111,21 @@ $breakpoints: (
             font-size:1rem;
             padding:15px 0 0;
             display:inline-block;
-            border-bottom:solid 1px common.$white100; 
+            border-bottom:solid 1px common.$white100;
+            position: relative;
+            &::after{
+                content:"";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: var(--black300);
+                bottom:-5px;
+                left:0;
+                transform-origin: left top;
+                transform: scale(0,1);
+                transition: .2s;
+            }
+            
         }
 
         &:hover{
@@ -122,7 +136,10 @@ $breakpoints: (
                 }
             }
             p{
-                border-bottom:solid 1px common.$black300; 
+                &::after{
+                    background: common.$black300;
+                    transform: scale(1,1);
+                }
             }
         }
         &:active{

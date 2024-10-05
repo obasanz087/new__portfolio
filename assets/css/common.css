@@ -354,17 +354,22 @@ header .nav_wrapper_sp .nav_sns p {
   display: inline-block;
   margin: 0 0 15px;
 }
-.main_btn::after {
+.main_btn::before {
   content: "";
-  width: 100%;
+  width: calc(100% - 20px - 16px - 20px - 5px);
   height: 1px;
   display: inline-block;
   background: #fff;
+  position: absolute;
+  bottom: 15px;
+  transform-origin: left top;
+  transform: scale(0, 1);
+  transition: 0.2s;
 }
 .main_btn .fa-brands {
   padding-right: 16px;
 }
-.main_btn::before {
+.main_btn::after {
   content: "";
   width: 5px;
   height: 5px;
@@ -381,14 +386,15 @@ header .nav_wrapper_sp .nav_sns p {
   color: #3a3a3a;
   border: solid 1px #898989;
 }
-.main_btn:hover::before {
+.main_btn:hover::after {
   width: 20px;
   height: 20px;
   right: 12.5px;
   animation: btn_hover_in 0.2s;
 }
-.main_btn:hover::after {
+.main_btn:hover::before {
   background: #3a3a3a;
+  transform: scale(1, 1);
 }
 .main_btn:hover span::after {
   animation: btn_hover_arrow_in 0.4s forwards;
