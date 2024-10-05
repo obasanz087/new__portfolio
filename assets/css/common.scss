@@ -375,17 +375,17 @@ header{
     border: solid 1px $white200;
     display:inline-block;
     margin:0 0 15px;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        display:inline-block;
+        background: $white100;
+    }
     .fa-brands{
         padding-right:16px;
     }
-    &.list{
-        background: none;
-        padding-left:0;
-        &:hover{
-            background: none;
-        }
-    }
-    &::after{
+    &::before{
         content:'';
         width: 5px;
         height: 5px;
@@ -402,11 +402,14 @@ header{
         background: $white200;
         color:$black300;
         border: solid 1px $black100;
-        &::after{
+        &::before{
             width: 20px;
             height: 20px;
             right:12.5px;
             animation: btn_hover_in .2s;
+        }
+        &::after{
+            background: $black300;
         }
         span::after{
             animation: btn_hover_arrow_in .4s forwards ;
@@ -429,10 +432,10 @@ header{
         i{
             color:$white200;
         }
-        &::after{
+        &::before{
             background: $green100;
         }
-        &::before{
+        &::after{
             color: $black200;
         }
     }
@@ -544,12 +547,16 @@ footer{
             line-height: 40px;
             margin-top:14px;
             @include mq(sm){
-                margin-top:calc(2rem + 160px);
+                background:$black300 ;
+                margin:0 0 0 -5vw;
+                padding:calc(2rem + 160px) 5vw 0 5vw;
+                width: 100%;
+
            }
            p{
-            color:$white200;
             letter-spacing: .1em;
             font-size:14px;
+            color:$black100;
            }
         }
         .footer_nav{
@@ -614,9 +621,7 @@ footer{
                 }
             }
             @include mq(sm){
-                &.pgtp_btn{
-                    margin-bottom:70px
-                }
+                display:none;
             }
             margin-top:1rem;
             text-align: right;
@@ -625,17 +630,22 @@ footer{
                 margin-top:8px;
            }
             a{
+                color:$black100;
                 line-height: 40px;
                 padding:14px 0;
                 margin-left:1em;
                 position: relative;
-                color:$white200;
+                s{
+                    color:$black100;
+                }
                 &:visited{
+                    color:$black100;
+                }
+                &:hover{
                     color:$white200;
-                } 
-                i{
-                    line-height: 40px;
-                    color:$white200;   
+                    s{
+                        color:$white200;
+                    }
                 }
             }
         }

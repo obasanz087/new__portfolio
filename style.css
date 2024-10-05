@@ -524,6 +524,7 @@ footer .footer_inner .says {
 }
 footer .footer_inner .footer_copy {
   line-height: 40px;
+  margin-top: 14px;
 }
 @media screen and (max-width: 599px) {
   footer .footer_inner .footer_copy {

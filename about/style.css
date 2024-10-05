@@ -56,6 +56,16 @@ header .header_logo.nav a {
 header .header_logo.nav a:visited {
   color: #e6e6e6;
 }
+header .header_logo.nav::after {
+  content: "© 2024 OBASANZ";
+  position: fixed;
+  bottom: 5vw;
+  left: 5vw;
+  color: #616161;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  font-weight: 500;
+}
 header .header_logo img {
   width: 50px;
   height: 50px;
@@ -238,7 +248,7 @@ header .nav_wrapper_sp .nav_close {
 header .nav_wrapper_sp .nav_close .close1 {
   position: absolute;
   bottom: 12px;
-  right: 0;
+  right: 3px;
   height: 1px;
   width: 21px;
   transform: rotate(45deg);
@@ -247,7 +257,7 @@ header .nav_wrapper_sp .nav_close .close1 {
 header .nav_wrapper_sp .nav_close .close2 {
   position: absolute;
   bottom: 12px;
-  right: 0;
+  right: 3px;
   height: 1px;
   width: 21px;
   transform: rotate(-45deg);
@@ -443,22 +453,10 @@ header .nav_wrapper_sp .nav_sns p {
   }
 }
 h2 {
-  letter-spacing: 0.15rem;
   font-size: 2rem;
   position: relative;
   color: #3a3a3a;
   margin: 1rem 0;
-}
-h2 span {
-  color: #b8b8b8;
-  font-size: 0.85rem;
-  line-height: 2.5rem;
-  font-weight: 500;
-}
-h2 span::before {
-  content: "";
-  padding: 0 0.5rem;
-  font-size: 2.5rem;
 }
 
 h3 {
@@ -526,7 +524,7 @@ footer .footer_inner .says {
 }
 footer .footer_inner .footer_copy {
   line-height: 40px;
-  margin-top: 1rem;
+  margin-top: 14px;
 }
 @media screen and (max-width: 599px) {
   footer .footer_inner .footer_copy {
@@ -535,7 +533,8 @@ footer .footer_inner .footer_copy {
 }
 footer .footer_inner .footer_copy p {
   color: #e6e6e6;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
+  font-size: 14px;
 }
 @media screen and (min-width: 600px) and (max-width: 1550px) {
   footer .footer_inner .footer_nav.pgtp_btn {
