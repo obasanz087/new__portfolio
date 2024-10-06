@@ -57,7 +57,7 @@ header .header_logo.nav a:visited {
   color: #e6e6e6;
 }
 header .header_logo.nav::after {
-  content: "© 2024 OBASANZ";
+  content: "Copyright 2024 OBASANZ";
   position: fixed;
   bottom: 5vw;
   left: 5vw;
@@ -135,8 +135,22 @@ header .nav_wrapper li a::before {
   transform: translateX(-50%);
   color: rgba(0, 0, 0, 0);
 }
-header .nav_wrapper li.marked a::before, header .nav_wrapper li:hover a::before {
+header .nav_wrapper li a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #3a3a3a;
+  display: inline-block;
+  margin-top: -12.5px;
+  transform-origin: left top;
+  transform: scale(0, 1);
+  transition: 0.2s;
+}
+header .nav_wrapper li.marked a::before {
   color: #527d4f;
+}
+header .nav_wrapper li:hover a::after {
+  transform: scale(1, 1);
 }
 header .nav_wrapper li a:visited {
   color: #3a3a3a;
@@ -583,22 +597,11 @@ footer .footer_inner .footer_nav ul li a {
   letter-spacing: 0.1rem;
   padding: 14px 0;
 }
-footer .footer_inner .footer_nav ul li a :active {
-  color: #97b195;
-}
 footer .footer_inner .footer_nav ul li a:visited {
   color: #e6e6e6;
 }
 footer .footer_inner .footer_nav ul li a:hover::after {
   content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #97b195;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 @media screen and (max-width: 599px) {
   footer .footer_inner .footer_nav ul li a:hover::after {
