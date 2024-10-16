@@ -57,7 +57,7 @@ header .header_logo.nav a:visited {
   color: #e6e6e6;
 }
 header .header_logo.nav::after {
-  content: "© 2024 OBASANZ";
+  content: "Copyright 2024 OBASANZ";
   position: fixed;
   bottom: 5vw;
   left: 5vw;
@@ -127,16 +127,24 @@ header .nav_wrapper li a {
   padding: 14px 0;
 }
 header .nav_wrapper li a::before {
-  content: "●";
-  line-height: 0.5rem;
-  font-size: 0.45rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(0, 0, 0, 0);
+  display: none;
 }
-header .nav_wrapper li.marked a::before, header .nav_wrapper li:hover a::before {
+header .nav_wrapper li a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #3a3a3a;
+  display: inline-block;
+  margin-top: -12.5px;
+  transform-origin: left top;
+  transform: scale(0, 1);
+  transition: 0.2s;
+}
+header .nav_wrapper li.marked a::before {
   color: #527d4f;
+}
+header .nav_wrapper li:hover a::after {
+  transform: scale(1, 1);
 }
 header .nav_wrapper li a:visited {
   color: #3a3a3a;
@@ -354,15 +362,20 @@ header .nav_wrapper_sp .nav_sns p {
   display: inline-block;
   margin: 0 0 15px;
 }
+.main_btn::before {
+  content: "";
+  width: calc(100% - 20px - 16px - 20px - 5px);
+  height: 1px;
+  display: inline-block;
+  background: #fff;
+  position: absolute;
+  bottom: 15px;
+  transform-origin: left top;
+  transform: scale(0, 1);
+  transition: 0.2s;
+}
 .main_btn .fa-brands {
   padding-right: 16px;
-}
-.main_btn.list {
-  background: none;
-  padding-left: 0;
-}
-.main_btn.list:hover {
-  background: none;
 }
 .main_btn::after {
   content: "";
@@ -387,6 +400,10 @@ header .nav_wrapper_sp .nav_sns p {
   right: 12.5px;
   animation: btn_hover_in 0.2s;
 }
+.main_btn:hover::before {
+  background: #3a3a3a;
+  transform: scale(1, 1);
+}
 .main_btn:hover span::after {
   animation: btn_hover_arrow_in 0.4s forwards;
 }
@@ -408,10 +425,10 @@ header .nav_wrapper_sp .nav_sns p {
 .main_btn:active i {
   color: #e6e6e6;
 }
-.main_btn:active::after {
+.main_btn:active::before {
   background: #97b195;
 }
-.main_btn:active::before {
+.main_btn:active::after {
   color: #616161;
 }
 
@@ -528,13 +545,16 @@ footer .footer_inner .footer_copy {
 }
 @media screen and (max-width: 599px) {
   footer .footer_inner .footer_copy {
-    margin-top: calc(2rem + 160px);
+    background: #3a3a3a;
+    margin: 0 0 0 -5vw;
+    padding: calc(2rem + 160px) 5vw 0 5vw;
+    width: 100%;
   }
 }
 footer .footer_inner .footer_copy p {
-  color: #e6e6e6;
   letter-spacing: 0.1em;
   font-size: 14px;
+  color: #898989;
 }
 @media screen and (min-width: 600px) and (max-width: 1550px) {
   footer .footer_inner .footer_nav.pgtp_btn {
@@ -571,22 +591,11 @@ footer .footer_inner .footer_nav ul li a {
   letter-spacing: 0.1rem;
   padding: 14px 0;
 }
-footer .footer_inner .footer_nav ul li a :active {
-  color: #97b195;
-}
 footer .footer_inner .footer_nav ul li a:visited {
   color: #e6e6e6;
 }
 footer .footer_inner .footer_nav ul li a:hover::after {
   content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #97b195;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 @media screen and (max-width: 599px) {
   footer .footer_inner .footer_nav ul li a:hover::after {
@@ -603,8 +612,8 @@ footer .footer_inner .footer_sns {
   }
 }
 @media screen and (max-width: 599px) {
-  footer .footer_inner .footer_sns.pgtp_btn {
-    margin-bottom: 70px;
+  footer .footer_inner .footer_sns {
+    display: none;
   }
 }
 @media screen and (max-width: 599px) {
@@ -614,17 +623,22 @@ footer .footer_inner .footer_sns {
   }
 }
 footer .footer_inner .footer_sns a {
+  color: #898989;
   line-height: 40px;
   padding: 14px 0;
   margin-left: 1em;
   position: relative;
-  color: #e6e6e6;
+}
+footer .footer_inner .footer_sns a s {
+  color: #898989;
 }
 footer .footer_inner .footer_sns a:visited {
+  color: #898989;
+}
+footer .footer_inner .footer_sns a:hover {
   color: #e6e6e6;
 }
-footer .footer_inner .footer_sns a i {
-  line-height: 40px;
+footer .footer_inner .footer_sns a:hover s {
   color: #e6e6e6;
 }
 
@@ -715,6 +729,10 @@ p.small_notice {
   line-height: 20px;
   margin-bottom: 10px;
   font-size: 1em;
+}
+
+.nav_wrapper li a::before {
+  margin-top: 0px !important;
 }
 
 .content_wrapper {

@@ -48,10 +48,14 @@ $breakpoints: (
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
+        transition: .2s;
     }
     &:hover{
         background: common.$white200;
         border: solid 1px common.$black300;
+    }
+    &:active{
+        transform: scale(0.90,0.90);
     }
     a{
         top:0;

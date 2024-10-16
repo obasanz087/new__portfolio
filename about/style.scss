@@ -11,6 +11,9 @@ $breakpoints: (
         @content;
     }
 }
+.nav_wrapper li a::before{
+    margin-top: 0px!important;
+}
 
 .content_wrapper{
     max-width: 800px!important; 
